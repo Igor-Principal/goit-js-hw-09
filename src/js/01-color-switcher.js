@@ -12,6 +12,7 @@ let id = null;
 
 refs.start.addEventListener('click', clickStart);
 refs.stop.addEventListener('click', clickStop);
+const delay = 1000;
 
 function clickStart() {
   refs.start.setAttribute('disabled', 'true');
@@ -19,9 +20,9 @@ function clickStart() {
     const color = getRandomHexColor();
     refs.body.style.backgroundColor = color;
     Notiflix.Notify.success(color, {
-      timeout: 500,
+      timeout: delay-500,
     });
-  }, 1000);
+  }, delay);
 }
 
 function clickStop() {
