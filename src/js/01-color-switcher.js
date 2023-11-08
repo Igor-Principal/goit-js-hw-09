@@ -28,5 +28,5 @@ function clickStart() {
 function clickStop() {
   clearInterval(id);
   refs.start.removeAttribute('disabled');
-//   refs.body.style.backgroundColor = originalColor;
+  // refs.body.style.backgroundColor = originalColor;
 }
