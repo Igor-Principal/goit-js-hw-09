@@ -8,11 +8,11 @@ const refs = {
 };
 
 // const originalColor = refs.body.style.backgroundColor;
-let id = null;
 
 refs.start.addEventListener('click', clickStart);
 refs.stop.addEventListener('click', clickStop);
-const delay = 1000;
+const DELEY = 1000;
+let id = null;
 
 function clickStart() {
   refs.start.setAttribute('disabled', 'true');
@@ -20,9 +20,9 @@ function clickStart() {
     const color = getRandomHexColor();
     refs.body.style.backgroundColor = color;
     Notiflix.Notify.success(color, {
-      timeout: delay-500,
+      timeout: DELEY - 500,
     });
-  }, delay);
+  }, DELEY);
 }
 
 function clickStop() {
