@@ -9,6 +9,7 @@ const refs = {
   hoursEl: document.querySelector('[data-hours]'),
   minutesEl: document.querySelector('[data-minutes]'),
   secondsEl: document.querySelector('[data-seconds]'),
+  body: document.querySelector('body'),
 };
 refs.btn.addEventListener('click', onClick);
 let currentDay = null;
@@ -16,6 +17,7 @@ let futureDay = null;
 let id = null;
 let time = 0;
 refs.btn.setAttribute('disabled', 'true');
+refs.body.style.backgroundColor = 'rgba(130, 155, 238, 0.556)';
 
 flatpickr(refs.input, {
   enableTime: true,
