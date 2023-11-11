@@ -33,7 +33,7 @@ function onSubmit(evt) {
         );
       })
       .catch(({ position, delay }) => {
-        Notiflix.Notify.success(
+        Notiflix.Notify.failure(
           `❌ Rejected promise ${position} in ${delay}ms`
         );
       });
